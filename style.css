@@ -39,10 +39,13 @@ body {
     align-items: center; /* Centrer verticalement */
     margin-bottom: 15px; /* Espace entre les membres */
     transition: all 0.3s; /* Transition pour un effet plus fluide */
+    filter: grayscale(100%); /* Image en noir et blanc */
+    transition: filter 0.3s; /* Transition douce lors du survol */
 }
 
 .membre:hover {
     background-color: #f0f0f0; /* Couleur au survol */
+    filter: grayscale(0%); /* Image en couleur */
 }
 
 /* Style pour les photos des membres */
@@ -56,4 +59,97 @@ body {
 /* Style pour les publications */
 .publications p {
     margin: 10px 0; /* Espacement entre les publications */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style du bloc isolé */
+.section-toggle {
+    border: 1px solid #ccc; /* Bordure grise légère */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet 3D léger */
+    padding: 20px; /* Espace intérieur */
+    background-color: white; /* Fond blanc */
+    margin: 20px; /* Espace extérieur */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Style des boutons de basculement */
+.switch-buttons {
+    text-align: center; /* Centrer les boutons */
+}
+
+.switch-buttons button {
+    background-color: #3498DB; /* Couleur bleu clair */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Rembourrage pour les boutons */
+    border: none; /* Pas de bordure */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: all 0.3s; /* Transition sur changement de couleur */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+.switch-buttons button:hover {
+    background-color: #2980B9; /* Bleu plus foncé au survol */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Augmentation de l'ombre au survol */
+}
+
+/* Autres styles existants pour les sections */
+.introduction, .membres, .publications {
+    padding: 15px; /* Espace autour du contenu */
+}
+
+
+
+
+
+
+
+/* Style de la section des publications */
+.publications {
+    padding: 20px; /* Espace intérieur pour la section des publications */
+}
+
+/* Style de chaque publication */
+.publication {
+    border: 0px solid #ccc; /* Bordure pour chaque publication */
+    padding: 10px; /* Espace intérieur */
+    margin-bottom: 20px; /* Espace entre les publications */
+}
+
+/* Titre en bleu marine et en gras */
+.publication-title {
+    color: navy; /* Bleu marine */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Auteurs en gris et en gras */
+.publication-authors {
+    color: gray; /* Gris */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* DOI en rouge clair */
+.publication-doi {
+    color: #ff6347; /* Rouge clair (Tomate) */
+    text-decoration: none; /* Pas de soulignement par défaut */
+}
+
+/* Effet au survol pour le lien DOI */
+.publication-doi:hover {
+    text-decoration: underline; /* Soulignement au survol */
 }

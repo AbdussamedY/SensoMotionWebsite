@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const btnMembres = document.getElementById("show-membres");
+    const btnPublications = document.getElementById("show-publications");
+    const sectionMembres = document.getElementById("section-membres");
+    const sectionPublications = document.getElementById("section-publications");
+
+    btnMembres.addEventListener("click", () => {
+        sectionMembres.style.display = "block"; // Afficher les membres
+        sectionPublications.style.display = "none"; // Masquer les publications
+    });
+
+    btnPublications.addEventListener("click", () => {
+        sectionMembres.style.display = "none"; // Masquer les membres
+        sectionPublications.style.display = "block"; // Afficher les publications
+    });
+
     const membres = document.querySelectorAll(".membre");
 
     membres.forEach((membre) => {

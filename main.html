@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Laboratoire de Neurosciences</title>
+    <title>SensoMotion</title>
     <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
@@ -33,32 +33,46 @@
         </p>
     </div>
 
-    <!-- Section sur les membres du labo -->
-    <div class="membres">
+    <!-- Boutons pour basculer entre les sections -->
+    <div class="switch-buttons">
+        <button id="show-membres">Membres</button>
+        <button id="show-publications">Publications</button>
+    </div>
+
+    <!-- Sections des membres et des publications -->
+    <div id="section-membres" class="membres">
         <h3>Membres du Laboratoire</h3>
+        <!-- Contenu des membres -->
         <div class="membre" member-info="Directeur du laboratoire, spécialisé en neurobiologie et neurosciences computationnelles.">
-            <img src="images/guy.png" alt="Photo de Guy BOUVIER" class="membre-photo">
+            <img src="images/guy.jpeg" alt="Photo de Guy BOUVIER" class="membre-photo">
             <div>
                 <strong>Dr. Guy BOUVIER</strong><br>
                 Chargé de Recherche
             </div>
         </div>
+        <div class="membre" member-info="brain=blood.">
+            <img src="images/patrick.jpeg" alt="Photo de Patrick REESON" class="membre-photo">
+            <div>
+                <strong>Dr. Patrick REESON</strong><br>
+                Post-doc
+            </div>
+        </div>
         <div class="membre" member-info="Le plus beau des doctorants">
-            <img src="images/adrien.jpg", alt="Photo d'Adrien BARRALIS" class="membre-photo">
+            <img src="images/adrien.jpeg", alt="Photo d'Adrien BARRALIS" class="membre-photo">
             <div>
                 <strong>Adrien BARRALIS</strong><br>
                 Doctorant
             </div>
         </div>
         <div class="membre" member-info="LabView fan">
-            <img src="images/avatar-male.jpeg"  alt="Photo d'Auguste POUCHELLE" class="membre-photo">
+            <img src="images/auguste.jpeg"  alt="Photo d'Auguste POUCHELLE" class="membre-photo">
             <div>
                 <strong>Auguste POUCHELLE</strong><br>
                 Ingénieur de Recherche
             </div>
         </div>
         <div class="membre" member-info="$$\int_{-\infty}^{+\infty}e^{-x^2}dx=\sqrt{\pi}$$">
-            <img src="images/avatar-male.jpeg", alt="Photo d'Abdussamed YAZICI" class="membre-photo">
+            <img src="images/abdussamed.jpeg", alt="Photo d'Abdussamed YAZICI" class="membre-photo">
             <div>
                 <strong>Abdussamed YAZICI</strong><br>
                 Étudiant M2
@@ -66,11 +80,143 @@
         </div>
     </div>
 
-    <!-- Section sur les projets -->
-    <div class="papiers">
+    <div id="section-publications" class="publications" style="display: none;">
         <h3>Publications</h3>
-        <p>1. Étude sur les effets des neurotransmetteurs sur le comportement.</p>
-        <p>2. Recherche sur les mécanismes de la mémoire à long terme.</p>
-        <p>3. Projet de développement de thérapies pour les maladies neurodégénératives.</p>
+        <div class="publication">
+            <strong class="publication-year">2023</strong>
+            <p>
+                <strong class="publication-title">A direction-selective cortico-brainstem pathway adaptively modulates innate behaviors.</strong>
+                Nature Communications, 2023, 14 (1), pp.8467. 
+                <strong class="publication-authors">Jiashu Liu, Yingtian He, Andreanne Lavoie, Guy Bouvier, Bao-Hua Liu.</strong> 
+                PMID 35193965; DOI: 
+                <a href="https://doi.org/10.1038/s41467-023-42910-2" class="publication-doi" target="_blank">10.1038/s41467-023-42910-2</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2022</strong>
+            <p>
+                <strong class="publication-title">Reply to Piochon et al.: NMDARs in Purkinje cells are not involved in parallel fiber-Purkinje cell synaptic plasticity or motor learning.</strong>
+                Proc Natl Acad Sci U S A. 2022 02 22; 119(8). 
+                <strong class="publication-authors">Schonewille M, Girasole AE, De Zeeuw CI, Bouvier G.</strong> 
+                PMID 35193965; DOI: 
+                <a href="https://doi.org/10.1073/pnas.2120480119" class="publication-doi" target="_blank">10.1073/pnas.2120480119</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2021</strong>
+            <p>
+                <strong class="publication-title">NMDARs in granule cells contribute to parallel fiber-Purkinje cell synaptic plasticity and motor learning.</strong>
+                Proc Natl Acad Sci U S A. 2021 09 14; 118(37). 
+                <strong class="publication-authors">Schonewille M, Girasole AE, Rostaing P, Mailhes-Hamon C, Ayon A, Nelson AB, Triller A, Casado M, De Zeeuw CI, Bouvier G.</strong> 
+                PMID 34507990; DOI: 
+                <a href="https://doi.org/10.1073/pnas.2102635118" class="publication-doi" target="_blank">10.1073/pnas.2102635118</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2020</strong>
+            <p>
+                <strong class="publication-title">Head Movements Control the Activity of Primary Visual Cortex in a Luminance-Dependent Manner.</strong>
+                Neuron. 2020 11 11; 108(3):500-511.e5. 
+                <strong class="publication-authors">Bouvier G, Senzai Y, Scanziani M.</strong> 
+                PMID 32783882; DOI: 
+                <a href="https://doi.org/10.1016/j.neuron.2020.07.004" class="publication-doi" target="_blank">10.1016/j.neuron.2020.07.004</a>
+            </p>
+            <p>
+                <strong class="publication-title">Cross-hemispheric gamma synchrony between prefrontal parvalbumin interneurons supports behavioral adaptation during rule shift learning.</strong>
+                Nat Neurosci. 2020 07; 23(7):892-902. 
+                <strong class="publication-authors">Cho KKA, Davidson TJ, Bouvier G, Marshall JD, Schnitzer MJ, Sohal VS.</strong> 
+                PMID 32451483; DOI: 
+                <a href="https://doi.org/10.1038/s41593-020-0647-1" class="publication-doi" target="_blank">10.1038/s41593-020-0647-1</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2018</strong>
+            <p>
+                <strong class="publication-title">Cerebellar learning using perturbations.</strong>
+                Elife. 2018 11 12; 7. 
+                <strong class="publication-authors">Bouvier G, Aljadeff J, Clopath C, Bimbard C, Ranft J, Blot A, Nadal JP, Brunel N, Hakim V, Barbour B.</strong> 
+                PMID 30418871; DOI: 
+                <a href="https://doi.org/10.7554/eLife.31599" class="publication-doi" target="_blank">10.7554/eLife.31599</a>
+            </p>
+            <p>
+                <strong class="publication-title">Towards resolving the presynaptic NMDA receptor debate.</strong>
+                Curr Opin Neurobiol. 2018 08; 51:1-7. 
+                <strong class="publication-authors">Bouvier G, Larsen RS, Rodríguez-Moreno A, Paulsen O, Sjöström PJ.</strong> 
+                PMID 29454833; DOI: 
+                <a href="https://doi.org/10.1016/j.conb.2017.12.020" class="publication-doi" target="_blank">10.1016/j.conb.2017.12.020</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2016</strong>
+            <p>
+                <strong class="publication-title">Reallocation of Olfactory Cajal-Retzius Cells Shapes Neocortex Architecture.</strong>
+                Neuron. 2016 Oct 19; 92(2):435-448. 
+                <strong class="publication-authors">de Frutos CA, Bouvier G, Arai Y, Thion MS, Lokmane L, Keita M, Garcia-Dominguez M, Charnay P, Hirata T, Riethmacher D, Grove EA, Tissir F, Casado M, Pierani A, Garel S.</strong> 
+                PMID 27693257; DOI: 
+                <a href="https://doi.org/10.1016/j.neuron.2016.09.020" class="publication-doi" target="_blank">10.1016/j.neuron.2016.09.020</a>
+            </p>
+            <p>
+                <strong class="publication-title">Burst-Dependent Bidirectional Plasticity in the Cerebellum Is Driven by Presynaptic NMDA Receptors.</strong>
+                Cell Rep. 2016 Apr 05; 15(1):104-116. 
+                <strong class="publication-authors">Bouvier G, Higgins D, Spolidoro M, Carrel D, Mathieu B, Léna C, Dieudonné S, Barbour B, Brunel N, Casado M.</strong> 
+                PMID 27052175; DOI: 
+                <a href="https://doi.org/10.1016/j.celrep.2016.03.004" class="publication-doi" target="_blank">10.1016/j.celrep.2016.03.004</a>
+            </p>
+            <p>
+                <strong class="publication-title">Contribution of postsynaptic T-type calcium channels to parallel fibre-Purkinje cell synaptic responses.</strong>
+                J Physiol. 2016 Feb 15; 594(4):915-36. 
+                <strong class="publication-authors">Ly R, Bouvier G, Szapiro G, Prosser HM, Randall AD, Kano M, Sakimura K, Isope P, Barbour B, Feltz A.</strong> 
+                PMID 26627919; DOI: 
+                <a href="https://doi.org/10.1113/JP271623" class="publication-doi" target="_blank">10.1113/JP271623</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2015</strong>
+            <p>
+                <strong class="publication-title">Presynaptic NMDA receptors: Roles and rules.</strong>
+                Neuroscience. 2015 Dec 17; 311:322-40. 
+                <strong class="publication-authors">Bouvier G, Bidoret C, Casado M, Paoletti P.</strong> 
+                PMID 26597763; DOI: 
+                <a href="https://doi.org/10.1016/j.neuroscience.2015.10.033" class="publication-doi" target="_blank">10.1016/j.neuroscience.2015.10.033</a>
+            </p>
+            <p>
+                <strong class="publication-title">Sox2 Sustains Recruitment of Oligodendrocyte Progenitor Cells following CNS Demyelination and Primes Them for Differentiation during Remyelination.</strong>
+                J Neurosci. 2015 Aug 19; 35(33):11482-99. 
+                <strong class="publication-authors">Zhao C, Ma D, Zawadzka M, Fancy SP, Elis-Williams L, Bouvier G, Stockley JH, de Castro GM, Wang B, Jacobs S, Casaccia P, Franklin RJ.</strong> 
+                PMID 26290228; DOI: 
+                <a href="https://doi.org/10.1523/JNEUROSCI.3655-14.2015" class="publication-doi" target="_blank">10.1523/JNEUROSCI.3655-14.2015</a>
+            </p>
+            <p>
+                <strong class="publication-title">Properties and molecular identity of NMDA receptors at synaptic and non-synaptic inputs in cerebellar molecular layer interneurons.</strong>
+                Front Synaptic Neurosci. 2015; 7:1. 
+                <strong class="publication-authors">Bidoret C, Bouvier G, Ayon A, Szapiro G, Casado M.</strong> 
+                PMID 25750623; DOI: 
+                <a href="https://doi.org/10.3389/fnsyn.2015.00001" class="publication-doi" target="_blank">10.3389/fnsyn.2015.00001</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong class="publication-year">2013</strong>
+            <p>
+                <strong class="publication-title">T-type channel blockade impairs long-term potentiation at the parallel fiber-Purkinje cell synapse and cerebellar learning.</strong>
+                Proc Natl Acad Sci U S A. 2013 Dec 10; 110(50):20302-7. 
+                <strong class="publication-authors">Ly R, Bouvier G, Schonewille M, Arabo A, Rondi-Reig L, Léna C, Casado M, De Zeeuw CI, Feltz A.</strong> 
+                PMID 24277825; DOI: 
+                <a href="https://doi.org/10.1073/pnas.1311686110" class="publication-doi" target="_blank">10.1073/pnas.1311686110</a>
+            </p>
+            <p>
+                <strong class="publication-title">Persistent posttetanic depression at cerebellar parallel fiber to Purkinje cell synapses.</strong>
+                PLoS One. 2013; 8(7):e70277. 
+                <strong class="publication-authors">Bergerot A, Rigby M, Bouvier G, Marcaggi P.</strong> 
+                PMID 23922966; DOI: 
+                <a href="https://doi.org/10.1371/journal.pone.0070277" class="publication-doi" target="_blank">10.1371/journal.pone.0070277</a>
+            </p>
+        </div>
     </div>
 </body>
