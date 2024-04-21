@@ -1,0 +1,59 @@
+/* Font */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style de la bannière avec image de fond */
+.banniere {
+    background-image: url('images/banniere.jpg'); /* Image de fond de la bannière */
+    background-size: cover; /* L'image couvre toute la largeur */
+    background-position: center; /* Centrer l'image */
+    height: 200px; /* Hauteur de la bannière */
+    position: relative; /* Pour positionner le texte */
+    display: flex; /* Pour aligner le texte au centre */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+/* Style du texte dans la bannière */
+.banniere-texte {
+    color: white; /* Couleur du texte */
+    font-size: 36px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Ombre pour la lisibilité */
+}
+
+/* Justification du texte dans l'introduction */
+.introduction p {
+    text-align: justify; /* Justifier le texte dans l'introduction */
+}
+
+/* Style pour les sections de la page */
+.introduction, .membres, .publications {
+    padding: 15px; /* Espace autour du contenu */
+}
+
+/* Style pour les membres du labo */
+.membre {
+    display: flex; /* Aligner horizontalement */
+    align-items: center; /* Centrer verticalement */
+    margin-bottom: 15px; /* Espace entre les membres */
+    transition: all 0.3s; /* Transition pour un effet plus fluide */
+}
+
+.membre:hover {
+    background-color: #f0f0f0; /* Couleur au survol */
+}
+
+/* Style pour les photos des membres */
+.membre-photo {
+    border-radius: 50%; /* Forme ovale/circulaire */
+    width: 60px; /* Taille de l'image */
+    height: 60px;
+    margin-right: 15px; /* Espace entre l'image et le texte */
+}
+
+/* Style pour les publications */
+.publications p {
+    margin: 10px 0; /* Espacement entre les publications */
+}
