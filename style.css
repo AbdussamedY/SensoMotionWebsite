@@ -1,64 +1,55 @@
-/* Font */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Poppins';
 }
 
-/* Style de la bannière avec image de fond */
-.banniere {
-    background-image: url('images/banniere.jpg'); /* Image de fond de la bannière */
-    background-size: cover; /* L'image couvre toute la largeur */
-    background-position: center; /* Centrer l'image */
-    height: 200px; /* Hauteur de la bannière */
-    position: relative; /* Pour positionner le texte */
-    display: flex; /* Pour aligner le texte au centre */
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
+header {
+	color: white;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 30vh; /* Hauteur du header */
+    width: 100%; /* Largeur du header */
+    background-image: url('images/space.avif');
+    background-size: cover;
 }
 
-/* Style du texte dans la bannière */
-.banniere-texte {
-    color: white; /* Couleur du texte */
-    font-size: 36px; /* Taille du texte */
-    font-weight: bold; /* Texte en gras */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Ombre pour la lisibilité */
+header .lab_identity {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 
-/* Justification du texte dans l'introduction */
-.introduction p {
-    text-align: justify; /* Justifier le texte dans l'introduction */
+header .lab_identity .lab_name {
+	font-size: 2em;
+	color: rgb(255, 168, 168);
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Style pour les sections de la page */
-.introduction, .membres, .publications {
-    padding: 15px; /* Espace autour du contenu */
+header .lab_identity .lab_subname {
+	font-size: 1.5em;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Style pour les membres du labo */
-.membre {
-    display: flex; /* Aligner horizontalement */
-    align-items: center; /* Centrer verticalement */
-    margin-bottom: 15px; /* Espace entre les membres */
-    transition: all 0.3s; /* Transition pour un effet plus fluide */
-    filter: grayscale(100%); /* Image en noir et blanc */
-    transition: filter 0.3s; /* Transition douce lors du survol */
+header .lab_identity .lab_infos {
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-.membre:hover {
-    background-color: #f0f0f0; /* Couleur au survol */
-    filter: grayscale(0%); /* Image en couleur */
-}
-
-/* Style pour les photos des membres */
-.membre-photo {
-    border-radius: 50%; /* Forme ovale/circulaire */
-    width: 60px; /* Taille de l'image */
-    height: 60px;
-    margin-right: 15px; /* Espace entre l'image et le texte */
-}
-
-/* Style pour les publications */
-.publications p {
-    margin: 10px 0; /* Espacement entre les publications */
+header .lab_identity .custom-hr {
+	border: none;
+    height: 0.5px;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 20px auto;
+	box-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 
@@ -69,48 +60,35 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-/* Style du bloc isolé */
-.section-toggle {
-    border: 1px solid #ccc; /* Bordure grise légère */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet 3D léger */
-    padding: 20px; /* Espace intérieur */
-    background-color: white; /* Fond blanc */
-    margin: 20px; /* Espace extérieur */
-    border-radius: 10px; /* Coins arrondis */
+/* Style de base pour la navbar */
+.navbar {
+    background: #1d1e3d; 
+    padding: 2px 20px;
 }
 
-/* Style des boutons de basculement */
-.switch-buttons {
-    text-align: center; /* Centrer les boutons */
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
 }
 
-.switch-buttons button {
-    background-color: #3498DB; /* Couleur bleu clair */
-    color: white; /* Couleur du texte */
-    padding: 10px 20px; /* Rembourrage pour les boutons */
-    border: none; /* Pas de bordure */
-    border-radius: 10px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    transition: all 0.3s; /* Transition sur changement de couleur */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+.nav-links a {
+    color: white;
 }
 
-.switch-buttons button:hover {
-    background-color: #2980B9; /* Bleu plus foncé au survol */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Augmentation de l'ombre au survol */
+.nav-links li:hover a {
+	color: #666c94;
 }
 
-/* Autres styles existants pour les sections */
-.introduction, .membres, .publications {
-    padding: 15px; /* Espace autour du contenu */
+.nav-links li.active a {
+	color: #ff0008;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+	flex: 1;
+	font-size: 10px;
 }
 
 
@@ -119,37 +97,248 @@ body {
 
 
 
-/* Style de la section des publications */
+
+.academia {
+	margin-top: 50px;
+    display: flex; /* Aligne les éléments en ligne */
+    justify-content: space-around; /* Espacement égal entre les images */
+    align-items: center; /* Aligne verticalement au centre */
+}
+
+.academy-img {
+    height: 50px; /* Définit la même hauteur pour toutes les images */
+    object-fit: contain; /* Conserve les proportions d'origine */
+    margin: 0 10px; /* Espacement entre les images */
+}
+
+
+
+
+
+
+
+
+
+
+.summary {
+	margin: 50px 20px 20px;
+    padding: 20px;
+    background-color: white; /* Gardez un fond clair pour une ombre visible */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une légère ombre */
+    background-color: #dfdfdf60;
+	text-align: left;
+}
+
+.summary h2 {
+    font-size: 23px; /* Taille de police pour le titre */
+	text-align: left;
+}
+
+.summary p {
+    font-size: 13px; /* Taille de police pour le texte */
+    color: #333; /* Couleur du texte */
+    line-height: 1.5; /* Espace entre les lignes */
+	text-align: justify;
+	margin-top: 5px; /* Espace entre les paragraphes */
+}
+
+
+
+
+
+
+
+
+.fundings {
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+
+.fundings h2 {
+	font-size: 23px; /* Taille de police pour le titre */
+	text-align: center;
+}
+
+
+
+.fundings-images {
+	margin-top: 20px;
+    display: flex;
+	flex-direction: column;  /* Aligner en colonne */
+	justify-content: flex-start;  /* Alignement vertical */
+	align-items: center;  /* Alignement horizontal */
+	height: 300px;  /* Définir une hauteur pour illustrer */
+}
+
+.fundings-img {
+    height: 100px; /* Définit la même hauteur pour toutes les images */
+    object-fit: contain; /* Conserve les proportions d'origine */
+    margin: 0 0 0; /* Espacement entre les images */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEMBERS PAGE */
+
+.person {
+	margin: 50px 20px 0;
+	display: flex;
+	align-items: top;
+	filter: grayscale(100%);
+	transition: filter 1s;
+}
+
+.person .image {
+	border-radius: 50%;
+	width:100px;
+	height: 100px;
+	margin-right: 15px;
+}
+
+.person:hover {
+	filter: grayscale(0%);
+}
+
+.person .name {
+	font-size: 17px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.person .status {
+	font-size:10px;
+	font-style: italic;
+	color: gray;
+}
+
+.person .description {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cliquable {
+	cursor: pointer;
+	color: blue;
+	position: relative;
+}
+
+.infobulle {
+	display: none;
+	position: absolute;
+	top: -30px;  /* Positionnez l'infobulle au-dessus du texte */
+	left: 0;
+	background-color: #000;
+	color: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	z-index: 1;
+}
+
+
+
+
+
+
+/* PUBLICATIONS PAGE */
+
+.research-gate {
+	margin-top: 20px;
+	margin-bottom: 20px;
+    position: relative; /* Nécessaire pour le positionnement absolu de l'élément enfant */
+	display: flex; /* Aligner les éléments en ligne */
+	justify-content: center; /* Centre horizontalement */
+	align-items: center; /* Centre verticalement */
+	width: 100%; /* Largeur du header */
+	flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    gap: 20px;
+}
+
+.personal {
+    border-radius: 50%; /* Rend l'image sphérique */
+    width: 70px; /* Taille de l'image */
+    height: 70px; /* Taille de l'image */
+}
+
+.RG {
+    position: absolute; /* Permet de positionner cette image par rapport au parent */
+    bottom: -5px; /* Positionne en bas */
+    right: 35px; /* Positionne à droite */
+    width: 30px; /* Taille de l'image chevauchante */
+    height: 30px; /* Taille de l'image chevauchante */
+}
+
 .publications {
-    padding: 20px; /* Espace intérieur pour la section des publications */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
 }
 
-/* Style de chaque publication */
+.publications h2 {
+	margin-left:10px;
+}
+
+.publication-list {
+    display: flex;
+    flex-direction: column;  /* Aligner les publications en colonne */
+    gap: 20px;  /* Espace entre les publications */
+}
+
 .publication {
-    border: 0px solid #ccc; /* Bordure pour chaque publication */
-    padding: 10px; /* Espace intérieur */
-    margin-bottom: 20px; /* Espace entre les publications */
+	margin-left:20px;
+	margin-right:20px;
+    padding: 10px;
+    background-color: #f7f7f7;  /* Fond léger pour distinguer chaque publication */
+    border: 1px solid #ddd; 
+    border-radius: 5px;  
 }
 
-/* Titre en bleu marine et en gras */
-.publication-title {
-    color: navy; /* Bleu marine */
-    font-weight: bold; /* Texte en gras */
+
+	
+
+.article-title {
+    font-weight: bold;  /* Met en gras le titre de l'article */
 }
 
-/* Auteurs en gris et en gras */
-.publication-authors {
-    color: gray; /* Gris */
-    font-weight: bold; /* Texte en gras */
+.authors {
+    color: gray;  /* Les auteurs en gris */
 }
 
-/* DOI en rouge clair */
-.publication-doi {
-    color: #ff6347; /* Rouge clair (Tomate) */
-    text-decoration: none; /* Pas de soulignement par défaut */
+.journal {
+    color: #72b9d1;  /* Nom du journal en bleu pâle */
 }
 
-/* Effet au survol pour le lien DOI */
-.publication-doi:hover {
-    text-decoration: underline; /* Soulignement au survol */
+a {
+    text-decoration: none;  /* Supprime la sous-ligne par défaut */
+    color: #1E90FF;  /* Lien DOI en bleu */
 }
+
+a:hover {
+    text-decoration: underline;  /* Sous-lignage lors du survol */
+}
+
+
+
+
