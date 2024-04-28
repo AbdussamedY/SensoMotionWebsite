@@ -283,7 +283,7 @@ header .lab_identity .custom-hr {
 }
 
 .RG {
-    position: absolute; /* Permet de positionner cette image par rapport au parent */
+    position: relative; /* Permet de positionner cette image par rapport au parent */
     bottom: -5px; /* Positionne en bas */
     right: 35px; /* Positionne à droite */
     width: 30px; /* Taille de l'image chevauchante */

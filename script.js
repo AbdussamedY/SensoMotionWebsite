@@ -1,16 +1,3 @@
-// function copyToClipboard(text, tooltipId) {
-//     navigator.clipboard.writeText(text).then(function() {
-//         const tooltip = document.getElementById(tooltipId); // Obtenir la référence par ID
-//         tooltip.classList.add("visible"); // Rendre la bulle visible
-
-//         // Masquer la bulle après 2 secondes
-//         setTimeout(() => {
-//             tooltip.classList.remove("visible");
-//         }, 2000);
-//     }, function(err) {
-//         console.error("Erreur lors de la copie au presse-papiers : ", err);
-//     });
-// }
 function copyText(element) {
     navigator.clipboard.writeText(element.innerText)
         .then(() => {
