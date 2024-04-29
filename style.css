@@ -10,6 +10,11 @@ body {
 	font-family: 'Poppins';
 }
 
+::selection {
+	background-color: rgb(80, 159, 255);
+	color: rgb(224, 243, 255); /* Pour rendre le texte plus lisible sur le fond vert */
+}
+
 header {
 	color: white;
     display: flex;
@@ -116,6 +121,24 @@ header .lab_identity .custom-hr {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .academia {
 	margin-top: 50px;
     display: flex; /* Aligne les éléments en ligne */
@@ -185,7 +208,7 @@ header .lab_identity .custom-hr {
 	flex-direction: column;  /* Aligner en colonne */
 	justify-content: flex-start;  /* Alignement vertical */
 	align-items: center;  /* Alignement horizontal */
-	height: 300px;  /* Définir une hauteur pour illustrer */
+	height: 10vh;  /* Définir une hauteur pour illustrer */
 }
 
 .fundings-img {
