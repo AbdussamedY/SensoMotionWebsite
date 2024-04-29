@@ -15,9 +15,9 @@ header {
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-    height: 30vh; /* Hauteur du header */
+    height: 60vh; /* Hauteur du header */
     width: 100%; /* Largeur du header */
-    background-image: url('images/space.avif');
+    background-image: url('images/neuropsi-night.png');
     background-size: cover;
 }
 
@@ -29,27 +29,45 @@ header .lab_identity {
 
 header .lab_identity .lab_name {
 	font-size: 2em;
-	color: rgb(255, 168, 168);
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+	color: rgb(200, 208, 224);
+	border-color: black;
+	text-shadow: 
+    -1px -1px 2px black,  /* ombre vers le haut gauche */
+    1px -1px 2px black,   /* ombre vers le haut droit */
+    -1px 1px 2px black,   /* ombre vers le bas gauche */
+    1px 1px 2px black;    /* ombre vers le bas droit */
 }
 
 header .lab_identity .lab_subname {
 	font-size: 1.5em;
 	color: rgb(255, 255, 255);
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+	border-color: black;
+	text-shadow: 
+    -1px -1px 1px black,  /* ombre vers le haut gauche */
+    1px -1px 1px black,   /* ombre vers le haut droit */
+    -1px 1px 1px black,   /* ombre vers le bas gauche */
+    1px 1px 1px black;    /* ombre vers le bas droit */
 }
 
 header .lab_identity .lab_infos {
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+	text-shadow: 
+	-1px -1px 1px black,  /* ombre vers le haut gauche */
+    1px -1px 1px black,   /* ombre vers le haut droit */
+    -1px 1px 1px black,   /* ombre vers le bas gauche */
+    1px 1px 1px black;    /* ombre vers le bas droit */
 }
 
 header .lab_identity .custom-hr {
 	border: none;
     height: 0.5px;
     background-color: #ffffff;
-    width: 50%;
+    width: 75%;
     margin: 20px auto;
-	box-shadow: 0 0 2px rgb(0, 0, 0);
+	box-shadow: 
+	-1px -1px 5px black,  /* ombre vers le haut gauche */
+    1px -1px 5px black,   /* ombre vers le haut droit */
+    -1px 1px 5px black,   /* ombre vers le bas gauche */
+    1px 1px 5px black;    /* ombre vers le bas droit */
 }
 
 
@@ -63,7 +81,7 @@ header .lab_identity .custom-hr {
 /* Style de base pour la navbar */
 .navbar {
     background: #1d1e3d; 
-    padding: 2px 20px;
+    padding: 5px 20px;
 }
 
 .nav-links {
@@ -88,7 +106,7 @@ header .lab_identity .custom-hr {
     display: flex;
     justify-content: space-between;
 	flex: 1;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 
@@ -219,6 +237,12 @@ header .lab_identity .custom-hr {
 	font-size:10px;
 	font-style: italic;
 	color: gray;
+}
+
+.person .status_PI {
+	font-size:10px;
+	font-style: italic;
+	color: rgb(187, 34, 34);
 }
 
 .person .description {
